@@ -1,7 +1,7 @@
 import React from 'react'
 import { WrapperDiv } from './styles';
 import { boxArray } from '../types';
-
+import { BASE_IMG_PATH } from '../../../const';
 
 
 const Title: React.FC<{}> = (): React.ReactElement => {
@@ -26,7 +26,7 @@ const Title: React.FC<{}> = (): React.ReactElement => {
     return(
     <WrapperDiv>
         <div className='contents'>
-            <img src={'' + '/bookmark.png'}/>
+            <img src={ BASE_IMG_PATH + '/bookmark.png'}/>
             <div className='links'>
                 <a href="https://github.com/facebook">facebook</a>
                 <p> / </p>
@@ -40,7 +40,7 @@ const Title: React.FC<{}> = (): React.ReactElement => {
             {box_array.map((item) => {
                 return(
                     <div className='box'>
-                        <img src={'' + item.img_path}/>
+                        <img src={ BASE_IMG_PATH + item.img_path}/>
                         <p> {item.text} </p>
                         {item.amount_text ? <div className='shade-text'>
                             {item.amount_text}

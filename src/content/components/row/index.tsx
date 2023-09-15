@@ -1,6 +1,7 @@
 import React from 'react'
 import { WrapperDiv } from './styles';
 import { responseType } from '../../types';
+import { BASE_IMG_PATH } from '../../../const';
 
 /** Function to create the subtitle under the header issue */
 const info_maker = (number: number,date: string, user: string) => {
@@ -30,7 +31,7 @@ const Row: React.FC<responseType> = ({title, labels, number, user, created_at, p
     return(
         <WrapperDiv >
             <div className='issue-img'>
-                <img src={'' + '/content/circle-dot-green.png'}/>
+                <img src={ BASE_IMG_PATH + '/content/circle-dot-green.png'}/>
             </div>
             <div className='row-content'>
                 <div className='row-header'>
@@ -54,21 +55,21 @@ const Row: React.FC<responseType> = ({title, labels, number, user, created_at, p
                 <div className='pull-requests'>
                     {pull_request ? (
                     <>
-                    <img src={'' + '/content/row-pullrequest.png'}/>
+                    <img src={ BASE_IMG_PATH + '/content/row-pullrequest.png'}/>
                     <span>1</span>
                     </>): null}
                 </div>
                 <div className='assignee'>
                     {assignee ?(
                     <>
-                    <img src={'' + '/content/row-assignee.png'}/>
+                    <img src={ BASE_IMG_PATH + '/content/row-assignee.png'}/>
                     <span>assignee</span>
                     </>): null}
                 </div>
                 <div className='messages'>
                     {comments ? (
                     <>
-                    <img src={'' + '/content/row-message.png'}/>
+                    <img src={ BASE_IMG_PATH + '/content/row-message.png'}/>
                     <span>{comments}</span>
                     </>) : null}
                 </div>

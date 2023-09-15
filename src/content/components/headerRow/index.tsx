@@ -1,5 +1,6 @@
 import React from 'react'
 import { WrapperDiv } from './styles';
+import { BASE_IMG_PATH } from '../../../const';
 
 const HeaderRow: React.FC<{}> = (): React.ReactElement => {
 
@@ -26,7 +27,7 @@ const HeaderRow: React.FC<{}> = (): React.ReactElement => {
                     {issue_status.map((item) => {
                         return(
                             <div className='status'>
-                                <img src={'' + '/content/' + item.img_path}/>
+                                <img src={ BASE_IMG_PATH + '/content/' + item.img_path}/>
                                 <span style={{ color: `${item.text === 'Closed'? 'grey' : 'black'}`}}>{item.total.toLocaleString('en', {useGrouping: true})}</span>
                                 <span style={{ color: `${item.text === 'Closed'? 'grey' : 'black'}`}}>{item.text}</span> 
                             </div>
@@ -38,7 +39,7 @@ const HeaderRow: React.FC<{}> = (): React.ReactElement => {
                         return(
                             <div className='status sort-item'>
                                 <span>{item}</span>
-                                <img className='down-arrow' src={'' + '/content/down-arrow.png'}/>
+                                <img className='down-arrow' src={ BASE_IMG_PATH + '/content/down-arrow.png'}/>
                             </div>)
                         })}
                 </div>

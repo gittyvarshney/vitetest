@@ -1,6 +1,7 @@
 import React from 'react'
 import { WrapperDiv } from './styles';
 import { boxArray } from '../types';
+import { BASE_IMG_PATH } from '../../../const';
 
 const SelectionList: React.FC<{}> = (): React.ReactElement => {
 
@@ -52,7 +53,7 @@ const SelectionList: React.FC<{}> = (): React.ReactElement => {
                     return(
                         <div className='item-s'>
                             <div className='item'>
-                            <img src={'' + '/selection' + item.img_path}/>
+                            <img src={ BASE_IMG_PATH + '/selection' + item.img_path}/>
                             <p> {item.text} </p>
                             {item.amount_text ? <div className='shade-text'>
                             {item.amount_text} </div> : null}
